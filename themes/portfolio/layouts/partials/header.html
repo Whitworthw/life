@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <!-- TODO: Remove unused fonts. -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons" rel="stylesheet">
+</head>
+<body>

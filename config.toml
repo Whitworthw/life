@@ -1,0 +1,4 @@
+baseURL = "https://alexwhitworth.com/"
+languageCode = "en-us"
+title = "Web development and design portfolio."
+theme = "portfolio"
